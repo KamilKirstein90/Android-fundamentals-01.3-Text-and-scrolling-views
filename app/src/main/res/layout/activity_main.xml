@@ -17,26 +17,46 @@
         android:text="@string/article_title"
         />
 
-    <TextView
-        android:id="@+id/tV_subHeading"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tV_heading"
-        android:background="@color/design_default_color_primary"
-        android:textColor="@color/white"
-        android:padding="@dimen/padding_regular"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-        android:text="@string/article_subtitle"
-        />
+        android:layout_below="@+id/tV_heading">
 
-    <TextView
-        android:id="@+id/tV_article"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tV_subHeading"
-        android:lineSpacingExtra="@dimen/articleLineSpacing"
-        android:padding="@dimen/padding_regular"
-        android:text="@string/article_text"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tV_subHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/design_default_color_primary"
+                android:textColor="@color/white"
+                android:padding="@dimen/padding_regular"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                android:text="@string/article_subtitle"
+                />
+
+            <TextView
+                android:id="@+id/tV_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/articleLineSpacing"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/article_text"
+                android:autoLink="web"
+                />
+
+            <Button
+                android:id="@+id/btn_addComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_LabelAddComment" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </RelativeLayout>
